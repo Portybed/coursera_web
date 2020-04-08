@@ -5,13 +5,12 @@ class DishDetail extends Component {
 
     renderComments(comments) {
         if (comments != null) {
-            return (comments.map((element) => {
+            return (comments.map((comment) => {
                 return (
                   <ul  className="list-unstyled">
-                        <li>{element.comment}</li>
-                        <li>
-                            {element.author}, 
-                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(element.date)))}
+                        <li>{comment.comment}</li>
+                        <li> {comment.author}, 
+                            {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
                         </li> 
                   </ul>
                 );
