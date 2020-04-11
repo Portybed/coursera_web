@@ -17,9 +17,9 @@ class Menu extends Component {
         console.log('Menu Component componentDidMount is invoked');
     }
 
-    onDishSelect(dish) {
-        this.setState({ selectedDish: dish});
-    }
+    onDishSelect(dishId) {
+        this.setState({ selectedDish: dishId});
+      }
 
     renderDish(dish) {
         if (dish != null)
